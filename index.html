@@ -995,7 +995,7 @@
             async loadSongsFromGitHub() {
                 try {
                     // First try GitHub API for better file listing
-                    const response = await fetch('https://api.github.com/repos/11YearGoat/music-/contents/');
+                    const response = await fetch('https://api.github.com/repos/11YearGoat/music/contents/');
                     
                     if (!response.ok) {
                         throw new Error(`GitHub API error: ${response.status}`);
@@ -1041,7 +1041,7 @@
             async tryDirectGitHubAccess() {
                 try {
                     // Try to get the raw HTML of the GitHub Pages and parse it
-                    const response = await fetch('https://11yeargoat.github.io/music-/');
+                    const response = await fetch('https://11yeargoat.github.io/music/');
                     const text = await response.text();
                     
                     // Parse HTML to find audio files
